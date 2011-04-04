@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+	  <!--set the size of an app to be fully width-->
+    <meta name="viewport" content="width=default-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <title>shrink city</title>
+	<link type="text/css"  rel="stylesheet" href="iphone_shrink.css"  />
+    
+	
+	<!-- iPad/iPhone specific css below, add after your main css >
+	<link rel="stylesheet" media="only screen and (max-device-width: 1024px)" href="ipad.css" type="text/css" />		
+	<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="iphone.css" type="text/css" />		
+	-->
+	<!-- If you application is targeting iOS BEFORE 4.0 you MUST put json2.js from http://www.JSON.org/json2.js into your www directory and include it here -->
+	<script type="text/javascript" charset="utf-8" src="phonegap.0.9.4.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+
+	// If you want to prevent dragging, uncomment this section
+	/*
+	function preventBehavior(e) 
+	{ 
+      e.preventDefault(); 
+    };
+	document.addEventListener("touchmove", preventBehavior, false);
+	*/
+	
+	function onBodyLoad()
+	{
+		document.addEventListener("deviceready",onDeviceReady,false);
+	}
+	
+	/* When this function is called, PhoneGap has been initialized and is ready to roll */
+	function onDeviceReady()
+	{
+		// do your thing!
+	}
+    
+    </script>
+  </head>
+  <body>
+      <div id="crop">
+          <div id="scene0" class="clearfix scene">
+             <img class="center-img"src="images/clinic.jpg" />
+            <div class="teller left-top">14.00 at Dr. Shrink clinic</div>
+          </div>
+          <div id="scene01" class="scene">
+              <div class="inner">
+                  <div class="panel">
+                      <div class="charactor-response-area clearfix">
+                          <img class="charactor response" id="01" src="images/hitler_grind_shadow.png"/>
+                          <img class="charactor response" id="02" src="images/hitler_confused.png"/>
+                      </div>
+                      <div class="charactor-holder clearfix">
+                          <div class="charactor-area clearfix">
+                              <img class="charactor"src="images/hitler_normal.png" />
+                              <div class="teller left-top">... This guy come to see me.</div>             
+                              <div class ="bubble-to-left"><p>I want to take over the world.</p></div>
+                          </div>
+                          <div class="bubble-to-left-player"><p>Great idea! What's stopping you?</p></div>
+                          <div class="bubble-to-right-player"><p>I think we all feel like that every
+                        now and then.</p></div>                          
+                      </div>
+                     
+                      <div class="chosen-panel">
+                          <ul>
+                            <li id="emo1">
+                                <a href="#">Encourage him</a> 
+                                <img src="images/enc-face.png" />                              
+                            </li>
+                            <li id="emo2">
+                                <a href="#">Discourage him</a>
+                                <img src="images/disc-face.png" /> 
+                            </li>
+                          </ul>
+                      </div>
+                   </div>
+              </div>
+          </div>         
+      </div>
+      
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="animator.js"></script>
+<script type="text/javascript" src="index.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,237 @@
+body{
+	margin:0;
+	padding:0;
+	font-family:anime,'Rock Salt', arial, serif;
+	font-size:13px;
+	color:#454545;
+}
+p{
+	margin:0;
+}
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+.clearfix:before,
+.clearfix:after{
+  content: ".";    
+  display: block;    
+  height: 0;    
+  overflow: hidden;	
+}
+.clearfix:after{clear: both;}
+.clearfix{zoom: 1;} /* IE < 8 */
+.center{
+	margin:0 auto;
+	display:block;
+}
+@font-face {
+	font-family: anime;
+	src: url('fonts/animeace2_reg.otf');
+}
+#crop{
+	width:320px;
+	height:480px;
+	overflow:hidden;
+	position:relative;
+}
+.chosen-panel{
+	background-color:rgba(0,0,0,0.3);
+	height:100px;	
+	position:absolute;
+	bottom:-115px;
+	left:0;
+	width:100%;	
+	text-align:center;
+	-webkit-transition-property:all;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: ease-in-out;
+}
+.move-up{
+	-webkit-transform: translateY(-115px);
+}
+.chosen-panel li{
+	display:inline-block;
+	padding-top:20px;
+	margin:0 6px;
+	position:relative;
+}
+.chosen-panel li img{
+	position:absolute;
+	left:45px;
+	bottom:-36px;
+}
+.chosen-panel li a{
+	display:block;
+	text-decoration:none;
+	background-color:#454545;
+	border:1px solid #bbb;
+	padding:12px 8px;
+	color:#fff;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	-moz-box-shadow: 0 0 7px rgba(0,0,0,0.8);
+	-webkit-box-shadow: 0 0 7px rgba(0,0,0,0.8);
+	font-size:12px;
+	
+}
+.teller{
+	border:2px solid #333;
+	padding:9px;
+	background-color:#fff;
+	opacity:0;
+	-webkit-transition-delay: 1200ms;
+	-webkit-transition-property:all;
+	-webkit-transition-duration: 600ms;
+	-webkit-transition-timing-function: ease-in;
+}
+.left-top{
+	position:absolute;
+	left:10px;
+	top:7px;
+}
+.scene{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	opacity:0;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-timing-function: ease-in;
+}
+#scene0{
+	z-index:2;
+}
+#scene01{
+	z-index:1;
+}
+@-webkit-keyframes bounce {
+	0% {
+		-webkit-transform: scale(0.9);
+		opacity:0;
+	}
+	80% {
+		-webkit-transform: scale(1.1);
+		opacity:1;
+	}
+	100% {
+		-webkit-transform: scale(1.0);
+		opacity:1;
+	}
+}
+.charactor-area{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration: 400ms;
+	-webkit-transition-timing-function: ease-in;
+}
+.charactor-response-area{
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0;
+	top:0;
+}
+.charactor-response-area img{
+	position:absolute;
+	left:3px;
+	top:0;
+}
+.blur{
+	opacity:0.3;
+}
+.bubble-to-left{
+	background:url('images/bb-to-left.png') no-repeat scroll transparent right top;
+	width:240px;
+	height:103px;
+	padding-top:25px;
+	position:absolute;
+	right:7px;
+	top:50px;
+	opacity:0;
+}
+.bubble-bounce{
+	-webkit-animation-name: bounce;
+	-webkit-animation-duration: 400ms;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-in-out;
+	 -webkit-animation-iteration-count: 1;
+}
+.bubble-to-left p{
+	margin:0px 20px 10px 20px;
+	padding:0;
+}
+.bubble-to-left-player{
+	background:url('images/bb-player-to-left.png') no-repeat scroll transparent right top;
+	width:240px;
+	height:166px;
+	padding-top:20px;
+	position:absolute;
+	right:7px;
+	bottom:18px;
+	opacity:0;
+
+}
+.bubble-to-right-player{
+	background:url('images/bb-player-to-right.png') no-repeat scroll transparent right top;
+	width:240px;
+	height:166px;
+	padding-top:20px;
+	position:absolute;
+	left:7px;
+	bottom:18px;
+	opacity:0;
+}
+.bubble-to-left-player p{
+	margin:30px 10px 0 17px;
+}
+.bubble-to-right-player p{
+	margin:30px 10px 0 17px;
+}
+.response{
+	opacity:0;
+	-webkit-transition-property:opacity;
+	-webkit-transition-duration: 700ms;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+.zoom-face{
+	-webkit-transform: scale(0.33);
+}
+.reveal{
+	opacity:1 !important;
+}
+.inner{
+	position:relative;
+	margin:4px;
+}
+.panel{
+	border:2px solid #333;
+	height:448px;
+	position:relative;
+}
+.center-img{
+	width:640px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-320px;/*half of the image width*/
+	margin-top:-415px;/*half of the image height*/
+	-webkit-transition-property:scale;
+	-webkit-transition-duration:7s;
+	-webkit-transition-timing-function: ease-in;
+}
+.charactor{
+	margin:90px auto 0 auto;
+}
+.zoom{
+	-webkit-transform: scale(0.8);
+}
+
